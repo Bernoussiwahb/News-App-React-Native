@@ -1,12 +1,11 @@
 {
   "expo": {
-    "name": "News-App-React-Native",
-    "slug": "News-App-React-Native",
+    "name": "PulseWave",
+    "slug": "pulsewave",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",

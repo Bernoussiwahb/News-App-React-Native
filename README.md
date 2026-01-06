@@ -3,6 +3,8 @@
 PulseWave is a modern news app built with Expo and React Native. It includes
 Firebase authentication, profile management, favorites storage in Firestore,
 and news discovery powered by News API.
+To run the app successfully, you must provide Firebase and News API keys
+via a local `.env` file (see Getting Started).
 
 ## Features
 
@@ -26,22 +28,33 @@ and news discovery powered by News API.
 npm install
 ```
 
-2) Configure Firebase
+2) Create a local environment file
 
-Update the file `src/config/firebase.js` with your Firebase web config.
+Copy the example file and fill in your keys. Do not commit your `.env` file.
 
-3) Configure News API
+```bash
+copy .env.example .env
+```
+
+3) Configure Firebase
+
+Create a project in Firebase Console, then set these variables in `.env`:
+
+- `EXPO_PUBLIC_FIREBASE_API_KEY`
+- `EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN`
+- `EXPO_PUBLIC_FIREBASE_PROJECT_ID`
+- `EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET`
+- `EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
+- `EXPO_PUBLIC_FIREBASE_APP_ID`
+
+4) Configure News API
 
 Create a News API key at https://newsapi.org.
-Then update `src/config/newsApi.js`:
-
-```js
-export const NEWS_API_KEY = 'YOUR_NEWS_API_KEY';
-```
+Then set `EXPO_PUBLIC_NEWS_API_KEY` in your `.env` file.
 
 Note: Do not commit your API key to a public repo.
 
-4) Start the app
+5) Start the app
 
 ```bash
 npm start -- --clear
